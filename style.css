@@ -145,6 +145,7 @@ body header {
   position: relative;
   border-bottom: 4px solid #aa7153;
   margin-bottom: 3em;
+  min-height: 8em;
 }
 
 body header img {
