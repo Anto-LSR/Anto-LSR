@@ -171,6 +171,8 @@ body {
             @include font;
             color: #9b2626;
             margin-top: 15px;
+            position: absolute;
+            top: 8em;
         }
         .clicked {
             background-color: #75978a !important;
@@ -302,7 +304,7 @@ body {
         transition: all 300ms;
     }
     #reinDeer:hover {
-        top: 17em;
+        top: 17em !important;
     }
     .participants {
         width: 100vw;

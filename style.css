@@ -196,6 +196,8 @@ body .insertNames #error-msg {
   font-family: "Barlow", sans-serif;
   color: #9b2626;
   margin-top: 15px;
+  position: absolute;
+  top: 8em;
 }
 
 body .insertNames .clicked {
