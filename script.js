@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     console.log("C BIEN CHARGER TU PEU YALER");
-});
+
 
 let giver = [];
 let receiver = [];
@@ -271,3 +271,4 @@ function addResults(giver, receiver) {
     }
 
 }
+});
