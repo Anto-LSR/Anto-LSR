@@ -434,7 +434,7 @@ body #reinDeer {
 }
 
 body #reinDeer:hover {
-  top: 17em;
+  top: 17em !important;
 }
 
 body .participants {
