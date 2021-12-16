@@ -145,7 +145,6 @@ body header {
   position: relative;
   border-bottom: 4px solid #aa7153;
   margin-bottom: 3em;
-  min-height: 8em;
 }
 
 body header img {
@@ -196,8 +195,6 @@ body .insertNames #error-msg {
   font-family: "Barlow", sans-serif;
   color: #9b2626;
   margin-top: 15px;
-  position: absolute;
-  top: 8em;
 }
 
 body .insertNames .clicked {
@@ -419,6 +416,7 @@ body .showNames {
   -webkit-box-shadow: 8px 6px 5px #00000087;
           box-shadow: 8px 6px 5px #00000087;
   min-height: 47vh;
+  position: absolute;
   left: 0%;
   top: 41%;
   right: 0%;
@@ -428,13 +426,13 @@ body #reinDeer {
   width: 10%;
   position: absolute;
   left: 19%;
-  top: 21em;
+  top: 43%;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
 body #reinDeer:hover {
-  top: 19em !important;
+  top: 40%;
 }
 
 body .participants {
@@ -671,6 +669,7 @@ li:hover {
 
 #showResults ul li {
   padding: 0.5em;
+  white-space: nowrap;
 }
 
 .slideInResult {
@@ -722,10 +721,14 @@ li:hover {
 
 span {
   color: #eaac51;
+  display: block;
+  font-size: 22px;
 }
 
 .span2 {
   color: #589e70;
+  display: block;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 850px) {
@@ -808,30 +811,9 @@ span {
   }
 }
 
-@media screen and (max-width: 1608px) {
-  #reinDeer {
-    left: 15em !important;
-    top: 22em !important;
-  }
-}
-
-@media screen and (max-width: 1137px) {
-  #reinDeer {
-    left: 15em !important;
-    top: 22em !important;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #reinDeer {
-    left: 12em !important;
-    top: 22em !important;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #reinDeer {
-    display: none;
+@media screen and (max-height: 600px) {
+  #showNames {
+    margin-top: 28% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -129,7 +129,6 @@ body {
         position: relative;
         border-bottom: 4px solid #aa7153;
         margin-bottom: 3em;
-        min-height: 8em;
         img {
             width: 5%;
             height: auto;
@@ -171,8 +170,6 @@ body {
             @include font;
             color: #9b2626;
             margin-top: 15px;
-            position: absolute;
-            top: 8em;
         }
         .clicked {
             background-color: #75978a !important;
@@ -283,7 +280,6 @@ body {
     }
     .showNames {
         background-color: #122521;
-
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 5%;
@@ -291,7 +287,7 @@ body {
         border-radius: 15px;
         box-shadow: 8px 6px 5px #00000087;
         min-height: 47vh;
-        // position: absolute;
+        position: absolute;
         left: 0%;
         top: 41%;
         right: 0%;
@@ -300,11 +296,11 @@ body {
         width: 10%;
         position: absolute;
         left: 19%;
-        top: 21em;
+        top: 43%;
         transition: all 300ms;
     }
     #reinDeer:hover {
-        top: 19em !important;
+        top: 40%;
     }
     .participants {
         width: 100vw;
@@ -491,7 +487,7 @@ li:hover {
         align-items: center;
         li {
             padding: 0.5em;
-            
+            white-space: nowrap;
         }
     }
     background-color: #122521;
@@ -552,10 +548,14 @@ li:hover {
 
 span {
     color: #eaac51;
+    display: block;
+    font-size: 22px;
 }
 
 .span2 {
     color: #589e70;
+    display: block;
+    font-size: 22px;
 }
 
 @media screen and (max-width: 850px) {
@@ -581,7 +581,7 @@ span {
         letter-spacing: 5px;
     }
     header {
-        height: 10vh;
+        height: 10vh
     }
     header img {
         display: none;
@@ -614,30 +614,8 @@ span {
     }
 }
 
-@media screen and (max-width: 1608px) {
-    #reinDeer {
-        left: 15em !important;
-        top: 22em !important;
-    }
-}
-
-
-@media screen and (max-width: 1137px) {
-    #reinDeer {
-        left: 15em !important;
-        top: 22em !important;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    #reinDeer {
-        left: 12em !important;
-        top: 22em !important;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #reinDeer {
-       display: none;
+@media screen and (max-height: 600px) {
+    #showNames {
+        margin-top: 28% !important;
     }
 }
