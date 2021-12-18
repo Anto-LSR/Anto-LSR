@@ -17,15 +17,12 @@
     <div class="container">
         <!-- <div id="weather">Afficher la météo</div> -->
         <div class="insertNames">
-
-
             <div class="participants">
                 <h3>ADD PARTICIPANTS</h3>
             </div>
-
             <div class="input">
                 <form action="" id="form" onsubmit="event.preventDefault();">
-                    <input type="text" id="nbParticipants" placeholder="Ex : Santa Claus" autocomplete="off">
+                    <input maxlength="30" type="text" id="nbParticipants" placeholder="Ex : Santa Claus" autocomplete="off">
                     <button id="inputBtn">Ok!</button>
                     <!-- not displayed -->
                 </form>
@@ -35,41 +32,21 @@
                 <button id="showResultBtn" class="hidden">
                     Click to show results !
                 </button>
+                <button id="shareBtn" class="btns hidden">Share result!</button>
             </div>
-
             <div class="showNames" id="showNames">
                 <ul id="list">
-
                 </ul>
             </div>
-
             <div>
                 <img id="reinDeer" class="hidden" src="./img/reindeer.png" alt="">
                 <div id="showResults" class="hidden">
-
                     <ul id="resultUl">
-
                     </ul>
-
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
         </div>
-
     </div>
-
-
-
-
     <script src="./index.js"></script>
 </body>
 

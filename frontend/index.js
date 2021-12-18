@@ -1,7 +1,3 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    console.log("C BIEN CHARGER TU PEU YALER");
-
-
 let giver = [];
 let receiver = [];
 let input = document.getElementById("nbParticipants");
@@ -127,7 +123,7 @@ const shuffle = () => {
         if (verif === true) {
             break;
         }
-        console.log(receiver);
+        
     } while (true)
 };
 
@@ -163,7 +159,7 @@ function shuffleList() {
 function repeatShuffle() {
     let i = 0
     let interval = setInterval(() => {
-        if (i === 5) {
+        if (i === 1) {  //  <---------------------------------------------------------SHUFFLE A MEETRE  A 5
             clearInterval(interval)
             shuffleBtn.classList.add("shuffleClicked");
             shuffleBtn.innerHTML = "Ok !";
@@ -231,10 +227,14 @@ function showDeer() {
 }
 
 
-
+let shareBtn = document.getElementById("shareBtn")
 resultBtn.addEventListener('click', () => {
     listbox.classList.remove("shuffleAnimation");
     listbox.classList.add("clickedResult");
+    resultBtn.classList.remove("confirmClicked")
+    resultBtn.classList.add("clickedResult")
+    shareBtn.classList.add("confirmClicked")
+    shareBtn.classList.remove("hidden")
 
 
 
@@ -266,9 +266,45 @@ function addResults(giver, receiver) {
         li.appendChild(document.createTextNode(myText));
         li.appendChild(span2);
         resultUl.appendChild(li);
-        console.log(i);
+        
 
     }
 
 }
-});
+
+//STOCKER RESULTAT
+shareBtn.addEventListener('click', () => {
+
+let receiverToJson = JSON.stringify(receiver)
+let giverToJson = JSON.stringify(giver)
+let token = generate_token(10);
+
+
+
+//SEND DATA TO BACK
+let xhr = new XMLHttpRequest();
+xhr.open("POST", 'http://localhost:3000/', true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    giver: giverToJson,
+    receiver: receiverToJson,
+    token 
+}));
+
+let newUrl = "/frontend/result.html?token="+token 
+shareBtn.setAttribute("disabled", true)
+})
+
+
+//GENERER TOKEN
+
+function generate_token(length){
+    //edit the token allowed characters
+    let a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");
+    let b = [];  
+    for (let i=0; i<length; i++) {
+        let j = (Math.random() * (a.length-1)).toFixed(0);
+        b[i] = a[j];
+    }
+    return b.join("");
+}
