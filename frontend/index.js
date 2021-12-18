@@ -291,8 +291,9 @@ xhr.send(JSON.stringify({
     token 
 }));
 
-let newUrl = "/frontend/result.html?token="+token 
+let newUrl = "http://127.0.0.1:5500/frontend/result.html?token="+token 
 shareBtn.setAttribute("disabled", true)
+alert(newUrl);
 })
 
 
