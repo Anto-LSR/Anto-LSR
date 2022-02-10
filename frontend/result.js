@@ -10,15 +10,15 @@ xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
         let response = JSON.parse(xhr.response)[0]
         console.log(response)
-         addResults(JSON.parse(response.giver), JSON.parse(response.receiver))
-      console.log(xhr.response); 
+        addResults(JSON.parse(response.giver), JSON.parse(response.receiver))
+        console.log(xhr.response);
     }
-  }
+}
 xhr.send();
 
 
 
-function clicklogo(){
+function clicklogo() {
     let newUrl = "http://127.0.0.1:5500/frontend/index.html"
     window.location.replace(newUrl)
 }
@@ -61,10 +61,8 @@ function addResults(giver, receiver) {
         li.appendChild(document.createTextNode(myText));
         li.appendChild(span2);
         resultUl.appendChild(li);
-        
+
 
     }
 
 }
-
-
