@@ -3,7 +3,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let token = urlParams.get('token')
 
-console.log(token)
 let xhr = new XMLHttpRequest();
 xhr.open("GET", 'http://localhost:3000/result?token=' + token, true);
 xhr.setRequestHeader('Content-Type', 'application/json');
@@ -12,12 +11,17 @@ xhr.onreadystatechange = function() {
         let response = JSON.parse(xhr.response)[0]
         console.log(response)
          addResults(JSON.parse(response.giver), JSON.parse(response.receiver))
-      console.log(xhr.response); // Par défault une DOMString
+      console.log(xhr.response); 
     }
   }
 xhr.send();
 
 
+
+function clicklogo(){
+    let newUrl = "http://127.0.0.1:5500/frontend/index.html"
+    window.location.replace(newUrl)
+}
 
 
 

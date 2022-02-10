@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secret Santa Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
 </head>
 
 <body>
     <header>
-        <img src="./img/reindeer.png" alt="">
+        <img id="logo" onclick="clicklogo()" src="./img/reindeer.png" alt="">
         <h1>SECRET SANTA</h1>
     </header>
     <div class="container">
@@ -32,7 +35,16 @@
                 <button id="showResultBtn" class="hidden">
                     Click to show results !
                 </button>
-                <button id="shareBtn" class="btns hidden">Share result!</button>
+                <!-- <button id="editBtn" class="btns">Edit!</button> -->
+                <button id="shareBtn" class="btns hidden">Share</button>
+            </div>
+            <div class="modal hidden" id="modal">
+                <div class="modalContent hidden" id="modalContent">
+                    <button id="closeModal"><i class="fas fa-times"></i></button>
+                    <input type="text" id="urlInput" spellcheck="false">
+                    <button id="copyBtn"><i class="far fa-copy"></i></button>
+
+                </div>
             </div>
             <div class="showNames" id="showNames">
                 <ul id="list">

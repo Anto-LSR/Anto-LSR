@@ -182,8 +182,6 @@ body {
             animation-duration: 2s;
             animation-fill-mode: forwards;
         }
-
-        
         @keyframes SlideOutBtn {
             0% {
                 transform: translateX(0%);
@@ -224,7 +222,6 @@ body {
             transform: scale(1);
             box-shadow: 4px 5px 5px black;
         }
-        
         .confirmClicked {
             animation-name: SlideInBtn;
             animation-duration: 1s;
@@ -277,7 +274,9 @@ body {
                 opacity: 0%;
             }
         }
-        
+    }
+    #logo {
+        cursor: pointer;
     }
     .hidden {
         display: none;
@@ -300,11 +299,11 @@ body {
         width: 10%;
         position: absolute;
         left: 19%;
-        top: 43%;
+        top: 35%;
         transition: all 300ms;
     }
     #reinDeer:hover {
-        top: 40%;
+        top: 30%;
     }
     .participants {
         width: 100vw;
@@ -405,7 +404,8 @@ li:hover {
     box-shadow: 3px 3px 0px #00000059;
 }
 
-#showResultBtn, .btns {
+#showResultBtn,
+.btns {
     border-radius: 15px;
     margin-top: 2em;
     background: #589f71;
@@ -422,21 +422,21 @@ li:hover {
     top: 33%;
 }
 
-#showResultBtn:hover, .btns:hover {
+#showResultBtn:hover,
+.btns:hover {
     background-color: #ebad51;
     transform: scale(1.1);
     box-shadow: 4px 5px 5px black;
 }
 
-#showResultBtn:active, .btns:active {
+#showResultBtn:active,
+.btns:active {
     background-color: #ebad51;
     transform: scale(1);
     box-shadow: 4px 5px 5px black;
 }
 
-
 // 
-
 #showResults {
     ul {
         list-style: none;
@@ -458,8 +458,6 @@ li:hover {
     border-radius: 15px;
     box-shadow: 8px 6px 5px #00000087;
 }
-
-
 
 span {
     color: #eaac51;
@@ -533,4 +531,87 @@ span {
     #showNames {
         margin-top: 28% !important;
     }
+}
+
+//------------------PAGE RESULT
+.modal {
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+    .modalContent {
+        height: 15vh;
+        width: 40vw;
+        background-color: #122521;
+        border: 3px solid #aa7153;
+        border-radius: 10px;
+        position: relative;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        @include dflex
+    }
+}
+
+#closeModal {
+    color: white;
+    font-size: 22px;
+    top: -10%;
+    left: 96%;
+    position: absolute;
+    height: 2em;
+    background-color: #589e70;
+    ;
+    width: 2em;
+    border: 3px solid #aa7153;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    background-color: #9b2626;
+}
+
+#urlInput {
+    background-color: #ebad51;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 33vw;
+    height: 4vh;
+}
+
+#urlInput[type="text"] {
+    font-size: 14px;
+}
+
+#copyBtn {
+    color: white;
+    font-size: 22px;
+    top: 44%;
+    left: 9%;
+    position: absolute;
+    height: 2em;
+    background-color: #589e70;
+    width: 2em;
+    border: 3px solid #aa7153;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -66%);
+}
+
+#copyBtn:hover {
+    background-color: #aa7153;
 }
